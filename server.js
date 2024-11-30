@@ -5,6 +5,7 @@ import GroupRoutes from './routes/Group.js'
 import StudentRoutes from './routes/Studnet.js';
 import SubjectRoutes from './routes/Subject.js';
 import teacherRoutes from './routes/Teacher.js';
+import MarksRoutes from './routes/Marks.js';
 dotenv.config();
 
 const app = express();
@@ -14,6 +15,7 @@ app.use('/group', GroupRoutes)
 app.use('/student', StudentRoutes)
 app.use('/subject', SubjectRoutes)
 app.use('/teacher', teacherRoutes);
+app.use('/marks', MarksRoutes);
 const port =8000
 
 app.listen(port, ()=>console.log('Server is running!'));
